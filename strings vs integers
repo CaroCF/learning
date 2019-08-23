@@ -1,0 +1,17 @@
+>>> # string echo
+>>> "123"
+'123'
+>>> # integer echo
+>>> 123
+123
+>>> # print string
+>>> print("2017")
+2017
+>>> print ("2017a")
+2017a
+>>> # print integer
+>>> print(2017)
+2017
+>>> print(2017a)# we expect error to occur since integers do not include alphabetical characters
+SyntaxError: invalid syntax
+>>> 
