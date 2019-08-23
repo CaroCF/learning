@@ -1,0 +1,6 @@
+#examples of printing strings with double and single quotes
+>>> print("Caro's learning Python 3")
+Caro's learning Python 3
+>>> print('These are the first lines of code she is writing') #funny comment: when trying to write "she's" because I'm using single quote, it assumed the wuote of the contraction was the end quote, so I had to write in full
+These are the first lines of code she is writing
+>>> 
