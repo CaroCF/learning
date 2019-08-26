@@ -15,3 +15,50 @@
 >>> print(2017a)# we expect error to occur since integers do not include alphabetical characters
 SyntaxError: invalid syntax
 >>> 
+
+>>> # assigning and printing different data types for a variable
+>>> student = "Caro"
+>>> student
+'Caro'
+>>> name = "Caro"
+>>> print(name)
+Caro
+>>> student_id = "12345"
+>>> print(student_id)
+12345
+>>> 
+
+>>> # assign a string value to variable student_name
+>>> student_name = "Caro"
+>>> # print the value of variable student_name
+>>> print(student_name)
+Caro
+>>> # assign the student_name a different string value
+>>> student_name = "Caro123"
+>>> # print the value of student_name
+>>> print(student_name)
+Caro123
+>>> # assign a 3rd different string value
+>>> student_name = "Caro4567"
+>>> # print the value of variable name
+>>> print(student_name)
+Caro4567
+>>> 
+>>> # assigning a value to a variable called bucket
+>>> bucket = "ZERO"
+>>> # print the value of bucket
+>>> print (bucket)
+ZERO
+>>> # assign an Integer value to the variablebucket
+>>> bucket = 0
+>>> # print the value of bucket
+>>> print(bucket)
+0
+>>> # print integer 123 number
+>>> print (123)
+123
+>>> # print string "123" number
+>>> print ("123")
+123
+>>> 
+
