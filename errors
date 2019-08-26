@@ -1,0 +1,113 @@
+>>> #study of errors in addition
+>>> #printing and addition of two strings where one reperesents numbers to humans but is processed as a string by computers
+>>> print("my number is "+"123")
+my number is 123
+>>> #printing the same addition but now using a string and a number with numeric value to both humans and computers
+>>> # we expect an error to occur
+>>> print("my number is "+123)
+Traceback (most recent call last):
+  File "<pyshell#131>", line 1, in <module>
+    print("my number is "+123)
+TypeError: can only concatenate str (not "int") to str
+>>> # error as expected
+>>> 
+>>> #error exercises: review the code below and run it. Fix any errors and run until code no longer shows errors
+>>> #original code 1
+>>> total_cost=3+"45"
+Traceback (most recent call last):
+  File "<pyshell#136>", line 1, in <module>
+    total_cost=3+"45"
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> #solution to original code 1
+>>> total_cost=3+45
+>>> print(total_cost)
+48
+>>> #original code 2
+>>> school_num=123
+>>> print("the street number of Central School is "+school_num)
+Traceback (most recent call last):
+  File "<pyshell#142>", line 1, in <module>
+    print("the street number of Central School is "+school_num)
+TypeError: can only concatenate str (not "int") to str
+>>> #solution to original code 2
+>>> schoool_num="123"
+>>> print("the street number of Central School is "+school num)
+SyntaxError: invalid syntax
+>>> print("the street number of Central School is "+school_num)
+Traceback (most recent call last):
+  File "<pyshell#146>", line 1, in <module>
+    print("the street number of Central School is "+school_num)
+TypeError: can only concatenate str (not "int") to str
+>>> school_num="123"
+>>> print("the street number of Central School is "+school_num)
+the street number of Central School is 123
+>>> #lessons learned:
+>>> #check spelling of variables when creating them and when referencing them
+>>> #original code 3
+>>> #we're also asked to write a hypothesis of what will happen before running it. Here's my hypothesis:
+>>> #on print(type(3.3)) it will echo the data type: float
+>>> #on print(type (3)) it will echo the data type: integer
+>>> #on print(3.3+3) it will echo the sum of those two numbers: 6.3
+>>> #let's find out!
+>>> print(type(3.3))
+<class 'float'>
+>>> print(type(3))
+<class 'int'>
+>>> print(3.3+3)
+6.3
+>>> #yey!
+>>> #foreseeing upcoming lessons! yeah!
+>>> 
+>>> #Study of different error types
+>>> #syntax errors
+>>> print("Hi!")
+Hi!
+>>> print('I like the morning")
+      
+SyntaxError: EOL while scanning string literal
+>>> print('I like the morning')
+I like the morning
+>>> #name errors
+>>> prin("Hi!")
+Traceback (most recent call last):
+  File "<pyshell#170>", line 1, in <module>
+    prin("Hi!")
+NameError: name 'prin' is not defined
+>>> #EOF (end of file) error: when Python went to the enf of the file looking for, but not finding, a closing parenthesis
+>>> print("where are my socks?"
+
+      #nothing happens, it doesn't show an error message, but it just goes onto the next line without printing.
+>>> 
+      
+SyntaxError: invalid syntax
+>>> # "a parenthesis inside quotations will be seen as part of the string"
+>>> print("my socks are in the wrong drawer)"
+
+      #same thing happens where no error is detected
+
+      )
+my socks are in the wrong drawer)
+>>> #funny how it then assumed the last parenthesis and executed the function
+>>> 
+>>> 
+>>> #repair the syntax error: print('my socks do not match")
+>>> print("my socks do not match")
+my socks do not match
+>>> #repair the NameError: pront("my socks do not match")
+>>> print("my socks do not match")
+my socks do not match
+>>> #repair the syntax error: print"Save the date!")
+>>> print("Save the date!")
+Save the date!
+>>> #repair the NameError: student_name="Alton"
+>>> #print(STUDENT_NAME)
+>>> student_name="Alton"
+>>> print(student_name)
+Alton
+>>> #repair the TypeError:
+>>> #total=3
+>>> #print(total+" students are in the canteen")
+>>> total="3"
+>>> print(total+" students are in the canteen")
+3 students are in the canteen
+>>> 
