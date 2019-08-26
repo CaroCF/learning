@@ -1,0 +1,109 @@
+>>> # echo the result of numerical addition
+>>> 9+3
+12
+>>> # echo the result of numerical addition - with floats
+>>> 12.4+76.3
+88.7
+>>> # echo the result of literal string addition
+>>> "my name is" + "Caro"
+'my name isCaro'
+>>> # re-echoing the last one with a space in between
+>>> "my name is "+"Caro"
+'my name is Caro'
+>>> # printing additions of integers, floats and strings
+>>> print(9+1)
+10
+>>> print(3.6+7.4)
+11.0
+>>> print("My id number is "+'1234567')
+My id number is 1234567
+>>>  # run code for adding a variable string and a literal string
+>>> id_number = 1234567
+>>> "my ID number is "+id_number
+Traceback (most recent call last):
+  File "<pyshell#67>", line 1, in <module>
+    "my ID number is "+id_number
+TypeError: can only concatenate str (not "int") to str
+>>> # second try with same exercise
+>>> id_number = "1234567"
+>>> "my ID number is " + id_number
+'my ID number is 1234567'
+>>> # lesson learned: both values need to be the same type to be added or, in this case, concatenated
+>>> 
+>>>#add 3 integer numbers
+>>> 3+4+7
+14
+>>> # add a float number and an integer number
+>>> 2+3.1
+5.1
+>>> # add the string "this notebook belongs to " and a string with your first name
+>>> "This notebook belongs to "+"Caro"
+'This notebook belongs to Caro'
+>>> # create variables sm_number and big_number and assign numbers then add the numbers
+>>> sm_number = 2
+>>> big_number = 12345
+>>> sm_number + big_number
+12347
+>>> # assign a string value to the variable first_name and add to the string " remember to save the notebook frequently"
+>>> first_name='Caro'
+>>> first_name+" remember to save the notebook frequently"
+'Caro remember to save the notebook frequently'
+>>> 
+>>> 
+>>> #addition in variable assignments and in print()
+>>> #review and run code for assigning variables & using addition
+>>> add_two = 34+16
+>>> add_two
+50
+>>> first_name="Tom"
+>>> greeting="Happy Birthday!"+first_name
+>>> greeting
+'Happy Birthday!Tom'
+>>> print(add_two)
+50
+>>> print(greeting)
+Happy Birthday!Tom
+>>> 
+>>> #review and run code for Integer addition in variables and in print function
+>>> int_sum=6+7
+>>> print(int_sum)
+13
+>>> print(11+15)
+26
+>>> print()
+
+>>> #string addition in variables and in print() function
+>>> hat_msg="I do not wear "+"a hat"
+>>> pritn(hat_msg)
+Traceback (most recent call last):
+  File "<pyshell#105>", line 1, in <module>
+    pritn(hat_msg)
+NameError: name 'pritn' is not defined
+>>> print(hat_msg)
+I do not wear a hat
+>>> print("at"+" dinner")
+at dinner
+>>> 
+>>> # create Integer addition and string addition output
+>>> #perform string addition in the variable named new_msg (add a string to "my favourite food is")
+>>> new_msg="My favourite food is "
+>>> print(new_msg)
+My favourite food is 
+>>> answer="soup"
+>>> print(new_msg+answer)
+My favourite food is soup
+>>> new_msg+answer
+'My favourite food is soup'
+>>> #perform integer addition in the variable named new_sum (add 2 or more integers)
+>>> new_sum=0+3
+>>> print(new_sum)
+3
+>>> #remake of exercise on addition in the variable named new_msg after understanding instructions
+>>> new_msg="my favourite food is "+"soup"
+>>> print(new_msg)
+my favourite food is soup
+>>> # create and print a new string variable, new_msg_2, that concatenates new_msg with a literal string
+>>> new_msg_2=new_msg + " - it's wonderful!"
+>>> print(new_msg_2)
+my favourite food is soup - it's wonderful!
+>>> 
