@@ -1,0 +1,22 @@
+>>> # data types and running type function for different data types
+>>> type("Hello World")
+<class 'str'>
+>>> type(501)
+<class 'int'>
+>>> type(8.125)
+<class 'float'>
+>>> student_name = "Caro"
+>>> type(student_name)
+<class 'str'>
+>>> student_name = 12345
+>>> type(student_name)
+<class 'int'>
+>>> 
+>>> student_name = '1234567'
+>>> type(student_name)
+<class 'str'>
+>>> type(-12)
+<class 'int'>
+>>> type(12.0)
+<class 'float'>
+>>> 
