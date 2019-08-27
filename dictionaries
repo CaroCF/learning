@@ -59,3 +59,26 @@ for key, value in book_1.items():
     print("\nKey: "+key)
     print("Value: "+value)
     
+
+-----------------------------
+
+#27-08-2019
+#CaroCF
+#Other ways to loop through dictionaries
+
+birthday_months ={
+    "tony":"november",
+    "pat":"june",
+    "mary":"may",
+    "gary":"may",
+}
+
+for name in birthday_months.keys():
+    print(name.title())
+
+for months in birthday_months.values():
+    print(months.title())
+
+for months in set(birthday_months.values()):
+    print(months.title())
+    
