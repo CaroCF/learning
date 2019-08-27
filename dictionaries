@@ -1,0 +1,12 @@
+#27.08.2019
+#CaroCF
+#Dictionaries
+
+# Create a dictionary of terms
+terms={}
+
+terms["variable"]="Represents or refers to a value stored in memory."
+terms["integer"]="A whole number."
+
+print(terms["variable"])
+print(terms["integer"])
