@@ -150,6 +150,34 @@ for extra in my_ordered_car["extras"]:
 ---------------------------------------------
 
 
+#27-08-2019
+#CaroCF
+#Adding a value to a dictionary
 
-    
-    
+#Create an empty dictionary
+rental_properties={}
+
+#Set a flag to indicate we're taking applications
+rental_open = True
+
+while rental_open:
+    #prompt users for user's name and address.
+    username =input("\nWhat is your name?")
+    rental_property = input("What is the address of the property you want to rent?")
+
+    #store the responses in dictionary
+    rental_properties[username] = rental_property
+
+    #ask if the user knows anyone else looking to rent a property
+    repeat = input("\nDo you know anyone else who might like to rent a property?")
+    if repeat == 'no':
+        rental_open = False
+
+    #adding property is complete
+
+print("\n---Property to rent---")
+for username, rental_property in rental_properties.items():
+    print(username+" has "+rental_property+" to rent.")
+
+--------------------------------
+
