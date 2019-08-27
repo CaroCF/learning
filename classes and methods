@@ -1,0 +1,93 @@
+#27-08-2019
+#CaroCF
+#Creating my first class and methods
+
+class Book():
+    """A class to create a book."""
+    
+    def __init__(self, name, price, publisher):
+        """Initialize the name, price and publisher."""
+        self.name=name
+        self.price=price
+        self.publisher=publisher
+
+    def hardback(self):
+        """Simulate a hardback book."""
+        print(self.name.title()+" is a hardback book.")
+
+    def softcover(self):
+        """Simulate a softcover book."""
+        print(self.name.title()+" is a softcover book.")
+
+    def ebook(self):
+        """Simulate an ebook."""
+        print(self.name.title()+" is an ebook.")
+
+    def ebook_reader(self):
+        """Simulate an ebook reader."""
+        print("Library: "+self.name+" "+str(self.price)+" "+self.publisher.title()+".")
+        
+#creating an instance of our book class
+my_book =Book("Neverwhere",19.99,"Lion Books")
+your_book =Book("4321",14.99,"Tiger Books")
+
+#Accessing atributes
+print("I'm currently reading "+my_book.name.title()+".")
+print("This book cost "+str(my_book.price)+".")
+
+my_book.softcover()
+my_book.hardback()
+
+#calling ebook_reader method
+my_book.ebook_reader()
+your_book.hardback()
+
+-------------------
+
+#27-08-2019
+#CaroCF
+#Creating a new ereader class
+
+class Ereader():
+    """A class to reperesent an ereader."""
+
+    def __init__(self,make,model,backlight,battery,screen_type,colour):
+        """Initialize attributes to describe ereader."""
+        self.make = make
+        self.model = model
+        self.backlight = backlight
+        self.battery = battery
+        self.screen_type=screen_type
+        self.colour=colour
+        self.library_count = 0
+
+    def get_ereader_name(self):
+        """Return a formatted name for an ereader."""
+        long_name =self.make +" - "+self.model+" - "+self.backlight+" - "+self.battery+" - "+self.screen_type+" - "+self.colour
+        return long_name.title()
+
+    def read_library_count(self):
+        """Show the amount of ebooks in our Kindle library."""
+        print("You have "+str(self.library_count)+" books in your Kindle library.")
+
+    def update_library_count(self,ebook_count):
+        """Update the amount of ebooks in my Kindle library."""
+        self.library_count=ebook_count
+
+    def increment_library_count(self,purchased_books):
+        """Add our new ebooks to our library count."""
+        self.library_count += purchased_books
+
+my_new_ereader = Ereader("Amazon Kindle","paperwhite","adjustable backlight","several months of battery life","300Dpi", "red")
+print(my_new_ereader.get_ereader_name())
+
+my_new_ereader.read_library_count()
+
+my_new_ereader.library_count=36
+my_new_ereader.read_library_count()
+
+my_new_ereader.update_library_count(48)
+my_new_ereader.read_library_count()
+
+my_new_ereader.increment_library_count(5)
+my_new_ereader.read_library_count()
