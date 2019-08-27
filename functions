@@ -1,0 +1,259 @@
+#27-08-2019
+#CaroCF
+#Defining a function
+
+def hello_world():
+    """Displaying hello world"""
+    print("Hello World!")
+
+hello_world()
+
+--------------------------
+
+#27-08-2019
+#CaroCF
+#Passing information to a function
+
+def hello_world(username):
+    """Showing a username"""
+    print("Hello " + username.title()+".")
+
+hello_world("caro")
+
+--------------------------
+
+#27-08-2019
+#CaroCF
+#Positional Arguments
+
+def book_description(book_type,book_author):
+    print("This is a "+book_type+" book.")
+    print("The author of this book is "+book_author+".")
+
+book_description("non-fiction","Paul Auster")
+book_description("fiction", "Neil Gaiman")
+
+#first program done without looking at lesson (after watching it to learn). Yey!
+
+---------------------------
+
+#27-08-2019
+#CaroCF
+#Keyword Arguments
+
+#Create a function
+def book_description(book_title,author):
+                     """Display book information"""
+                     print("This book is "+book_title.title()+".")
+                     print("It's author is "+author+".")
+book_description(book_title="4321",author="Paul Auster")
+
+-------------------------
+
+#27-08-2019
+#CaroCF
+#Default Values
+
+def book_description(author, book_type="non-fiction"):
+    """Display book information"""
+    print("This book is a "+book_type+" book.")
+    print("It's author is "+author.title()+".")
+
+book_description("neil gaiman")
+book_description("neil gaiman",book_type="fiction")
+
+----------------------
+
+#27-08-2019
+#CaroCF
+#Returning value in a function
+
+def formated_name(first_name,last_name):
+    """Return formatted name"""
+    full_name=first_name+" "+last_name
+    return(full_name.title())
+
+student=formated_name("caro","cf")
+print(student)
+
+def get_formatted_username(email_address):
+    """Return a formatted username"""
+    username=email_address.strip()
+    return username
+
+user=get_formatted_username("    caro@example.com  ")
+print(user)
+
+-------------------
+#27-08-2019
+#CaroCF
+#making arguments optional
+
+def formatted_name(first_name,last_name, middle_name=""):
+    """Return a full name"""
+    if middle_name:
+        full_name=first_name+" "+middle_name+" "+last_name
+    else:
+        full_name=first_name+" "+last_name
+    return full_name.title()
+
+student=formatted_name("caro","cf")
+print(student)
+
+teacher=formatted_name("tony","st","james")
+print(teacher)
+
+------------------
+#27-08-2019
+#CaroCF
+#using while loop in a funtion
+
+def get_formatted(first_name,last_name):
+    """Return a full name neatly formatted"""
+    full_name=first_name+" "+last_name
+    return full_name.title()
+
+while True:
+    print("\nWhat is your name?")
+    print("(Press 'q' at any time to quit this program.)")
+    first_name = input("First Name: ")
+    if first_name == "q":
+        break
+    
+    last_name = input("Last Name: ")
+    if last_name == "q":
+        break
+
+    formatted_name = get_formatted(first_name,last_name)
+    print("\nHello, "+formatted_name+"!")
+    
+    ---------------
+    #27-08-2019
+#CaroCF
+#Passing a list to a function
+
+def books_available(books):
+    """Show a list of books available to buy"""
+    for book in books:
+        books_in_stock = "the following title is available to buy: "+book+"."
+        print(books_in_stock)
+
+available =["4321","Neverwhere","the swarm"]
+books_available(available)
+
+----------------
+
+#27-08-2019
+#CaroCF
+#Modifying a list in a function
+
+def passengers(not_checked_in,checked_in):
+    """Simulate passengers who are not checked in."""
+
+    while not_checked_in:
+        current_passenger = not_checked_in.pop()
+
+        #Simulate checking a passenger in.
+        print("Checking in passsenger: "+current_passenger)
+        checked_in.append(current_passenger)
+
+def show_checked_in_passengers(checked_in):
+    """Show all the passengers who have checked in."""
+    print("\nThe following passengers have been checked in: ")
+    for passengers in checked_in:
+        print(passengers)
+
+not_checked_in=["Mary Sanders", "Paul Graham"]
+checked_in = []
+
+passengers(not_checked_in,checked_in)
+show_checked_in_passengers(checked_in)
+
+----------
+
+#27-08-2019
+#CaroCF
+#Arbitraty arguments
+
+def create_passenger(*requests):
+    """Print user requests"""
+    print("\nThis passenger has requested: ")
+    for request in requests:
+        print("-"+request)
+
+create_passenger("window seat", "Seat at top of plane", "breakfast")
+
+-----------
+#27-08-2019
+#CaroCF
+#Using positional and arbitrary arguments together
+
+def assign_seat(seat,*requests):
+    """Assign a seat and requests to a passenger"""
+    print("\nAssign seat number "+str(seat)+" the following requests:")
+    for request in requests:
+        print("-"+request)
+
+assign_seat(36,"window seat")
+
+-------------
+#27-08-2019
+#CaroCF
+#Using arbitrary keyword arguments
+
+def seat_profile(first,last,**passenger_info):
+    """Build a dictionary containing all passenger info"""
+    profile={}
+    profile["first_name"]=first
+    profile["last_name"]=last
+    for key,value in passenger_info.items():
+        profile[key]=value
+    return profile
+
+passenger_profile=seat_profile("caro","cf",seat_preference="aisle seat",meals="breakfast")
+print(passenger_profile)
+
+-------------
+
+#27-08-2019
+#CaroCF
+#Our module/ Importing an entire module
+
+def books_available(*books):
+    """Show list of all avaialble books"""
+    for book in books:
+        books_in_stock = "The following book is available to buy: "+book
+        print(books_in_stock)
+        
+ #saved file as "books_to_buy.py"
+ 
+ --------------
+ #27-08-2019
+#CaroCF
+#Our module/ Importing an entire module
+
+import books_to_buy
+
+books_to_buy.books_available("Neverwhere")
+
+----------------
+
+#27-08-2019
+#CaroCF
+#Our module/ Importing an entire module
+
+from books_to_buy import books_available
+
+books_available("4321","Neverwhere")
+
+----------
+#27-08-2019
+#CaroCF
+#Our module/ Importing an entire module
+
+from books_to_buy import books_available as ba
+
+ba("4321","Neverwhere")
+
+-------------------
+
