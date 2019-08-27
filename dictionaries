@@ -81,4 +81,75 @@ for months in birthday_months.values():
 
 for months in set(birthday_months.values()):
     print(months.title())
+
+
+
+--------------------
+
+#27-08-2019
+#CaroCF
+#Using dictionary in a list
+
+book_0={"name":"Harry Potter","author":"JK Rowling", "price":"14.99", "publisher":"Penguin Books"}
+book_1={"name":"Neverwhere", "author":"Neil Gaiman", "price":"12.99", "publisher": "Lion Books"}
+book_2={"name":"4321", "author":"Paul Auster", "price":"19.99","publisher":"Tiger Books"}
+
+books=[book_0,book_1,book_2]
+
+for book in books:
+    print(book)
+
+
+
+
+------------------------------
+
+#27-08-2019
+#CaroCF
+#Using dictionary in a list
+
+stock_items=[]
+
+#Make 50 blue pens
+
+for blue_pen in range(0,50):
+    new_blue_pen={"colour":"blue","type":"bluepoint","price":"1.99"}
+    stock_items.append(new_blue_pen)
+    
+#changing the price of first 5 pens
+
+for blue_pen in stock_items[0:5]:
+    if blue_pen["price"]=="1.99":
+        blue_pen["price"]="0.99"
+
+for blue_pen in stock_items[0:5]:
+    print(blue_pen)
+    
+    
+    
+---------------------------------
+
+
+#27-08-2019
+#CaroCF
+#Using list in a dictionary
+
+my_ordered_car={
+    "type":"standard car",
+    "extras" : ["alloy wheels","climate control","white leather interior"],
+    }
+
+#Print order summary
+
+print("The car you ordered is a "+my_ordered_car["type"]+" with the following extras:")
+
+for extra in my_ordered_car["extras"]:
+    print("\t"+extra)
+    
+    
+---------------------------------------------
+
+
+
+    
     
