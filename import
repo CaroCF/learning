@@ -1,0 +1,60 @@
+#29-08-2019
+#CaroCF
+#Import a single class
+
+from ereader_class import Ereader
+
+my_new_ereader = Ereader("Amazon Kindle", "Paperwhite", "Adjustable backlight","12 hours battery","300 dpi", "red")
+print(my_new_ereader.get_ereader_name())
+
+
+from ereader_class import KindleFire
+
+my_kindle_fire = KindleFire("amazon","kindle fire","backlight","color screen","12 hours","red")
+print(my_kindle_fire.get_ereader_name())
+
+print(my_kindle_fire.firescreen.describe_screen())
+
+----------------
+
+#29-08-2019
+#CaroCF
+#Import a single class
+
+from ereader_class import Ereader, KindleFire
+
+my_new_ereader=Ereader("amazon","paperwhite","backlight","12 hours","300 dpi","red")
+print(my_new_ereader.get_ereader_name())
+
+my_color_ereader=KindleFire("amazon","kindlefire","backlight","12 hours","300 dpi","red")
+print(my_color_ereader.get_ereader_name())
+
+-------------
+
+#29-08-2019
+#CaroCF
+#Import a single class
+
+import ereader_class
+
+my_new_ereader=ereader_class.Ereader("amazon","paperwhite","backlight","12 hours","300 dpi","red")
+print(my_new_ereader.get_ereader_name())
+
+my_color_ereader=ereader_class.KindleFire("amazon","kindlefire","backlight","12 hours","300 dpi","red")
+print(my_color_ereader.get_ereader_name())
+
+--------------
+
+#29-08-2019
+#CaroCF
+#Import a single class
+
+from ereader_class import *
+
+my_new_ereader=Ereader("amazon","paperwhite","backlight","12 hours","300 dpi","red")
+print(my_new_ereader.get_ereader_name())
+
+my_color_ereader=KindleFire("amazon","kindlefire","backlight","12 hours","300 dpi","red")
+print(my_color_ereader.get_ereader_name())
+---------------------------------
+
