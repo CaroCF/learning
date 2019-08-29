@@ -1,0 +1,46 @@
+#29-08-2019
+#CaroCF
+#test a fucntion
+
+def get_formatted_name(first,last):
+    """Generate a formatted name."""
+    full_name =first+" "+last
+    return full_name.title()
+-----------------------
+29-08-2019
+#CaroCF
+#test a fucntion
+
+from test_function import get_formatted_name
+
+print("Enter 'q' to quit this program.")
+while True:
+    first = input("\nWhat is your first name? ")
+    if first =="q":
+        break
+
+    last=input("\nWhat is your last name? ")
+    if last =="q":
+        break
+
+    formatted_name=get_formatted_name(first,last)
+    print(formatted_name)
+-------------------------------------------
+
+#29-08-2019
+#CaroCF
+#test a function
+
+import unittest
+
+from test_function import get_formatted_name
+
+class NamesTestCase(unittest.TestCase):
+    """Tests for the test_function.py"""
+
+    def test_first_last_name(self):
+        """Test first adn last names."""
+        formatted_name=get_formatted_name("tony","staunton")
+        self.assertEqual(formatted_name,"Tony Staunton")
+
+unittest.main()
