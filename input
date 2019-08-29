@@ -7,3 +7,77 @@ prompt = "This is a very long prompt to ask you for your first name. Please writ
 name=input(prompt)
 
 ---------------------
+
+#29-08-2019
+#CaroCF
+#input
+
+print("enter a small int: ")
+small_int=input()
+print("The small int is "+small_int+".")
+
+#get input for the variable student_name
+print("Please enter your student name: ")
+student_name=input()
+#determine the type of student_name
+student_type=type(student_name)
+print(student_type)
+
+#run cell several times entering a name int number abd a float number after adding code below
+print("enter a name or a number: ")
+test_input=input()
+#insert code below to check the type of test_input
+print(type(test_input))
+
+#get user input for a city name in the variable named city_name
+city_name=input("Please enter a city name: ")
+#print the city name
+print(city_name)
+
+#create variables to store input: name, age, get_mail
+
+#create prompts for name, age and yes/no to being on an email list
+name=input("Please enter your name: ")
+age=input("Please enter your age: ")
+get_email=input("Please type in 'yes' or 'no':\nWould you like to be added to our mailing list? ")
+
+#print description + input values
+print("name = "+name+"\nage = "+age+"\nwants email updates: "+get_email)
+---------------------------------
+
+#29-08-2019
+#CaroCF
+#input
+
+name="Caro"
+print("Hello "+name+"!")
+#print 2 strings on the same line using commas
+print(name,"is from Berlin.")
+
+#use a print() function with comma separation to combine 2 numbers and 2 strings
+print("Hello, today is the",29,"of August",2019,".")
+
+#initialize variables street and st_number with input()
+#display a message about the street and street number using comma separation formatting
+street=input("Please enter your address:\nStreet: ")
+st_number=input("Street number: ")
+print("Your current address is",street,st_number,".")
+
+#display text made from combining a variable, a literal string and a number
+#define a variable with a string or numeric value
+#display a message combining the variable, 1 or more literal strings and a number
+
+name="Caro"
+print(name,"you are",31,"years old.")
+
+#Create a program that prints out a reservation for a training class. Gather the name of the party, the number attending and the time.
+
+owner=input("under which name would you like to make your reservation? ")
+num_people=input("how many people are attending the class? ")
+training_time=input("what time would you like to take this class? ")
+
+#create an integer variable min_early: number of minutes early teh party should arrive
+min_early=15
+#using comma separation, print reminder text
+print("Your reservation for",num_people,"under the name",owner,"is sonfirmed for",training_time,".")
+print("Please arrive",min_early,"minutes before the class starts.")
