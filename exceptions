@@ -1,0 +1,114 @@
+#29-08-2019
+#CaroCF
+#Using the try-except method
+
+
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You cannot divide by zero.")
+
+print("Please enter another number")
+---------------------------------
+#29-08-2019
+#CaroCF
+#The else block
+
+print("Please enter two numbers to de divided:")
+print("Press 'q' to quit")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == "q":
+        break
+
+    second_number = input("\nSecond number: ")
+    if second_number == "q":
+        break
+
+    answer=int(first_number)/int(second_number)
+    print(answer)
+
+------------------
+
+#29-08-2019
+#CaroCF
+#The else block
+
+print("Please enter two numbers to de divided:")
+print("Press 'q' to quit")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == "q":
+        break
+
+    second_number = input("\nSecond number: ")
+    try:
+        answer=int(first_number)/int(second_number)
+    except ZeroDivisionError:
+        print("You cannot divide by zero")
+    else:
+        print(answer)
+        
+        
+-------------------
+
+#29-08-2019
+#CaroCF
+#FileNotFoundError
+
+filename = "caro.txt"
+
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+
+except FileNotFoundError:
+     message = "Sorry, the file "+filename+" cannot be found."
+     print(message)
+     
+------------------
+
+#29-08-2019
+#CaroCF
+#Analysing text
+
+filename ="heathcliff.txt"
+
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+except FileNotFoundError:
+    message = "Sorry, the file "+filename+" cannot be found."
+else:
+    words = contents.split()
+    number_words=len(words)
+    print("the file" + filename+" has approximately "+str(number_words)+ " words.")
+
+--------------------------
+
+#29-08-2019
+#CaroCF
+#Analysing text
+
+def word_count(filename):
+    """Count the number of words in a file"""
+    try:
+        with open(filename) as file_object:
+            contents = file_object.read()
+    except FileNotFoundError:
+        pass
+        #message = "Sorry, the file "+filename+" cannot be found."
+        #print(message)
+    else:
+        words = contents.split()
+        number_words=len(words)
+        print("The file" + filename+" has approximately "+str(number_words)+ " words.")
+
+filenames =["heathcliff.txt","mobydick.txt"]
+
+for filename in filenames:
+    word_count(filename)
+-------------------------
+
