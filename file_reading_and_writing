@@ -1,0 +1,70 @@
+#29-08-2019
+#CaroCF
+#Read an entire file
+
+with open("movies.txt") as file_object:
+    contents = file_object.read()
+    print(contents.strip())
+    
+    ---------------
+    
+#29-08-2019
+#CaroCF
+#Reading a file line by line
+
+filename = "movies_line_by_line.txt"
+
+with open(filename) as file_object:
+    for line in file_object:
+        print(line)
+
+
+---------------
+
+#29-08-2019
+#CaroCF
+#Making a list from a file
+
+filename="movies_line_by_line.txt"
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+for line in lines:
+    print(line.strip())
+
+#working with contents of a file
+
+print("\n----------------------------------\n")
+
+popped_movie = lines.pop()
+
+for line in lines:
+    print(line.strip())
+
+print("\n----------------------------------\n")
+
+sorted_list =lines.sort()
+for line in lines:
+    print(line.strip())
+    
+-------------------------------
+
+#29-08-2019
+#CaroCF
+#writing to an empty file
+
+filename = "programming.txt"
+
+with open(filename, "w") as file_object:
+    file_object.write("Hello, my name is Caro.")
+
+#writing multiple lines to a file and using append
+
+message = input("What is your favourite filme?")
+print(message.title())
+
+filename="favourite_film.txt"
+
+with open(filename, "a") as file_object:
+    file_object.write(message + "\n")
