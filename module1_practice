@@ -1,0 +1,110 @@
+#30-08-2019
+#CaroCF
+#Practice exercises form Module 1
+
+#get user input for a variable named remind_me
+#print the value of the variable remind_me
+#use string addition to print "remember: " before the remind_me input string
+
+remind_me=input()
+print(remind_me)
+print("remember: "+remind_me)
+
+#get user input for 2 variables: meeting_subject and meeting_time
+#use string addition to print meeting subject and time with labels
+
+meeting_subject=input("What's this meeting about? ")
+meeting_time=input("What time is this meeting? ")
+print("\nYour meeting about "+meeting_subject+" is at "+meeting_time+".")
+
+#print the combined strings "Wednesday is" and "in the middle of the week" 
+print("wednesday is "+"in the middle of the week.")
+
+#print combined string "Remember to" and the string variable remind_me from input above
+print("Remember to "+remind_me)
+
+#Combine 3 variables from above with multiple strings
+print("Remember to "+remind_me+" before you go for your meeting about "+meeting_subject+" at "+meeting_time+".")
+
+#print a string sentence that will display an Apostrophe (')
+print("'Sscnitzel' is not an English word.")
+
+#print a string sentence that will display a quote(") or quotes
+print('"Be brave and be strong"')
+
+#complete vehicle tests 
+
+vehicle="vehicle"
+print("All alpha: ",vehicle.isalpha())
+print("All alpha or numeric: ",vehicle.isalnum())
+print("Is capitalized: ",vehicle.istitle())
+print("All low cases: ",vehicle.islower())
+print("All upper cases: ",vehicle.isupper())
+
+
+#print True or False if color starts with "b"
+color="color"
+print("'Color' starts with 'b': ",color.startswith('b'))
+
+#print the string variable capital_this Capitalizing only the first letter
+capitalize_this = "the TIME is Noon."
+print(capitalize_this.capitalize())
+
+
+#print the string variable swap_this in swapped case
+swap_this = "wHO writes LIKE tHIS?"
+print(swap_this.swapcase())
+
+
+#print the string variable whisper_this in all lowercase
+whisper_this = "Can you hear me?"
+print(whisper_this.lower())
+
+
+# print the string variable yell_this in all UPPERCASE
+yell_this="Can you hear me Now?"
+print(yell_this.upper())
+
+
+#format input using .upper(), .lower(), .swapcase, .capitalize()
+format_input = input('enter a string to reformat: ')
+print(format_input.upper())
+print(format_input.lower())
+print(format_input.swapcase())
+print(format_input.capitalize())
+
+#get user input for a variable named color
+#modify color to be all lowercase and print
+color=input("Enter a colour: ")
+lower_color=color.lower()
+print(lower_color)
+
+#get user input using variable remind_me and format to all **lowercase** and print
+#test using input with mixed upper and lower cases
+remind_you=input("What should I remind you about? ")
+remind_lower=remind_you.lower()
+print(remind_lower)
+
+
+#get user input for the variable yell_this and format as a "YELL" to ALL CAPS
+yell_that=input("What will you yell? ")
+yell_caps=yell_that.upper()
+print(yell_caps)
+
+#get user input for the name of some animals in the variable animals_input
+animals_input=input("Please write the name of some animals: ")
+
+#print true or false if 'cat' is in the string variable animals_input
+cat="cat"
+print("You wrote cat: ",cat in animals_input)
+
+#get user input for color
+color_input=input("Please enter a color: ")
+
+#print True or False for starts with "b"
+print("The colour you wrote starts with 'b': ",color_input.startswith('b'))
+
+
+#print color variable value exactly as input 
+#test with input: "Blue", "BLUE", "bLUE"
+print(color_input)
