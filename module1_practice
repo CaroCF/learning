@@ -108,3 +108,24 @@ print("The colour you wrote starts with 'b': ",color_input.startswith('b'))
 #print color variable value exactly as input 
 #test with input: "Blue", "BLUE", "bLUE"
 print(color_input)
+
+#project: "guess what I'm reading"
+#get 1 word input for can_read variable
+#get 3 things input for can_read_things variable
+#print True if can_read is in can_read_things
+#challenge: format the output to read "item found = True" (or false)
+#hint: look print formatting exercises
+
+can_read=input("What can you read? ")
+can_read_things=input("Enter 3 items that can be read: ")
+print("item found = ",can_read in can_read_things)
+
+# Allergy check 
+# get input for test
+# print True if "dairy" is in the input or False if not
+# Check if "nuts" are in the input
+# Challenge: Check if "seafood" is in the input
+# Challenge: Check if "chocolate" is in the input
+
+test=input("What are your allergies? ")
+print("dairy allergy: ","dairy"in test)
