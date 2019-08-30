@@ -1,0 +1,95 @@
+#29-08-2019
+#CaroCF
+#other miscellaneous exercises
+
+#alphabetical
+"Python".isalpha()
+
+#alphanumeric
+"3rd".isalnum()
+
+#case sensitive
+"Save".startswith("s")
+
+#
+"HEY".islower()
+"HEY".isupper()
+
+#every word separated by space is upper case
+"The End".istitle()
+
+#only runs on strings so remember to add quotes
+cm_height="176"
+cm_height.isdigit()
+
+#
+cm_height="176"
+print("Is cm_heights",cm_height,"all digits? ",cm_height.isdigit())
+
+alpha_test=input("Please write something: ")
+print(alpha_test.isalpha())
+
+
+#.upper(), .lower(), capitalize()
+
+print("ms.Browning is in her School office.".upper())
+print("ms.Browning is in her School office.".lower())
+print("ms.Browning is in her School office.".capitalize())
+
+#.title(),swapcase()
+print("time to SAVE your code.".title())
+print("time to SAVE your code.".swapcase())
+
+#get input for a variable, fav_food, that describes a favorite food
+#display fav_food as ALL CAPS, used in a sentence
+#display fav_food as all lower case, used in a sentence
+#display fav_food with swapped case, used in a sentence
+#display fav_food with capitalization, used in a sentence
+
+fav_food=input("What's your favourite food? ")
+print(fav_food.upper(),"is your favouritte food.")
+print(fav_food.lower(),"is your favouritte food.")
+print(fav_food.swapcase(),"is your favouritte food.")
+print(fav_food.capitalize(),"is your favouritte food.")
+
+## [] display the fav_color variable "Forest Green" as upper, lower, swapcase, and capitalize formatting in a single print() statement
+fav_colour="Forest Green"
+print("How do you write it?",fav_colour.upper(),",",fav_colour.lower(),",",fav_colour.swapcase(),"or",fav_colour.capitalize(),"?")
+
+#input variable fav_color as upper
+#print fav_color
+fav_color=input("What's your favourite colour? ").upper()
+print(fav_color)
+
+------------
+
+#add code below testing the menu string variable for 'pizza', 'soup', and 'dessert' using keyword   in
+#print each test on a separate line with a description (e.g. "Pizza in menu = True")
+
+menu="icecream, jelly beans, pizza, yummy soup."
+print("Pizza in menu =","Pizza".lower()in menu.lower())
+print("SOup in menu =","SOup".lower()in menu.lower())
+print("dessert in menu =","dessert".lower()in menu.lower())
+
+#create a program where user can check if an item is on the menu
+
+menu="icecream, jelly beans, pizza, soup"
+lookup_word=input("What item would you like to look up on the menu? ")
+print("The item",lookup_word,"is on the menu is: ",lookup_word.lower() in menu.lower())
+
+#create a program where the user adds an item to the menu
+
+menu="icecream, jelly beans, pizza, soup"
+new_item=input("What would you like to add to the menu? ")
+new_menu=menu+", "+new_item
+print(new_menu)
+
+#fix the error
+#paint_colors = "red, blue, green, black, orange, pink"
+#print('Red in paint colors = ',red in paint_colors)
+
+paint_colors = "red, blue, green, black, orange, pink"
+print('Red in paint colors = ',"red".lower()in paint_colors.lower())
+---------------------------
+
+
