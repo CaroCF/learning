@@ -1,0 +1,623 @@
+#30-08-2019
+#CaroCF
+#Practice exercises from Module 2
+
+#define (def) a simple function called yell_it() and call the function
+
+def yell_it():
+    phrase="phrase"
+    print(phrase.upper())
+
+yell_it()
+
+# [ ] define yell_this()
+def yell_this(phrase="what?"):
+    print(phrase.upper())
+    
+# [ ] get user input in variable words_to_yell
+words_to_yell=input("Say something: ")
+
+# [ ] call yell_this function with words_to_yell as argument
+yell_this(words_to_yell)
+
+# create and call make_doctor() with full_name argument from user input - then print the return value
+def make_doctor(name):
+    doctor="Dr. "+name
+    return doctor
+
+full_name=input("Enter your full name: ")
+
+print(make_doctor(full_name))
+
+# [ ] add a 3rd period parameter to make_schedule
+# [ ] Optional - print a schedule for 6 classes (Tip: perhaps let the function make this easy)
+
+def make_schedule(period1, period2, period3):
+    schedule = ("[1st] " + period1.title() + ", [2nd] " + period2.title()+", [3rd] "+period3.title())
+    return schedule
+
+student_schedule = make_schedule("mathematics", "history","science")
+print("SCHEDULE:", student_schedule)
+
+# [ ] fix the sequence of the code to remove the NameError
+
+def hat_available(color):
+    hat_colors = 'black, red, blue, green, white, grey, brown, pink'
+    return(color.lower() in hat_colors)
+
+have_hat = hat_available('GReen')  
+  
+print('hat available is', have_hat)
+
+# [ ] create function bird_available
+def bird_available(bird):
+    bird_types="crow, robin, parrot, eagle, sandpiper, hawk, pigeon"
+    bird_type=bird in bird_types
+    return bird_type
+
+# [ ] user input
+
+bird=input("Please enter a bird name: ")
+
+# [ ] call bird_available
+bird_available(bird)
+
+# [ ] print availability status
+print(bird_available(bird))
+
+# define function how_many
+def how_many():
+    requested = input("enter how many you want: ")
+    return requested
+
+# get the number_needed
+number_needed = how_many()
+print(number_needed, "will be ordered")
+
+# [ ] define and call a function short_rhyme() that prints a 2 line rhyme
+
+def short_rhyme():
+    rhyme="Mais vale um pássaro na mão que dois a voar."
+    print(rhyme)
+    
+short_rhyme()
+
+# [ ] define (def) a simple function: title_it() and call the function
+# - has a string parameter: msg
+# - prints msg in Title Case
+
+def title_it(msg):
+    print(msg.title())
+
+title_it("hello")
+
+
+# [ ] get user input with prompt "what is the title?" 
+# [ ] call title_it() using input for the string argument
+msg_1=input("What is the title? ")
+title_it(msg_1)
+
+
+# [ ] define title_it_rtn() which returns a titled string instead of printing
+# [ ] call title_it_rtn() using input for the string argument and print the result
+
+def title_it_rtn(msg):
+    titled_msg=msg.title()
+    return titled_msg
+
+titled_msg_1=title_it_rtn("the swarm")
+print(titled_msg_1)
+
+#program bookstore()
+# [ ] create, call and test bookstore() function
+
+def bookstore(book,price):
+    sentence="Your book "+title_it_rtn(book)+" is "+price+" Euros."
+    return sentence
+
+book_entry=input("What's the book's name? ")
+price_entry=input("what's the book's price? ")
+
+print(bookstore(book_entry,price_entry))
+
+#fix the error
+
+def make_greeting(name, greeting = "Hello"):
+    return (greeting + " " + name + "!")
+
+# get name and greeting, send to make_greeting 
+
+def get_name():
+    name_entry = input("enter a name: ")
+    return name_entry
+
+def get_greeting():
+    greeting_entry = input("enter a greeting: ")
+    return greeting_entry
+
+print(make_greeting(get_name(), get_greeting()))
+
+
+# [ ] create, call and test fishstore() function
+
+def fishstore(fish,price):
+    sentence="Fish Type: "+fish+" costs €"+price
+    return sentence
+
+fish_entry=input("enter a fish: ")
+price_entry=input("enter a price: ")
+
+print(fishstore(fish_entry,price_entry))
+
+sunny_today = True
+# [ ] test if it is sunny_today and give proper responses using if and else
+
+if sunny_today:
+    print("It's sunny today!")
+else:
+    print("It's not sunny today.")
+
+sunny_today = False
+# [ ] use code you created above and test sunny_today = False
+
+if sunny_today:
+    print("It's sunny today!")
+else:
+    print("It's not sunny today.")
+    
+# [ ] use if, else to test for islower() for the 2 strings
+
+test_string_1="welcome"
+test_string_2="I have €3"
+test_string_3="With a function it's efficient to repeat code."
+
+if test_string_1.islower():
+    print(test_string_1+" is lower case.")
+else:
+    print(test_string_1+" is not lower case.")
+
+if test_string_2.islower():
+    print(test_string_2+" is lower case.")
+else:
+    print(test_string_2+" is not lower case.")
+
+# [ ] create a function w_start_test() use if & else to test with startswith('w')
+# [ ] Test the 3 string variables provided by calling w_start_test()
+
+def w_start_test(test_string):
+    if test_string.startswith("w"):
+        print(test_string+" starts with 'w'.")
+    else:
+        print(test_string+" does not start with 'w'.")
+
+w_start_test(test_string_1)
+w_start_test(test_string_2)
+w_start_test(test_string_3)
+
+x = 9 + 4
+# [ ] create a test to print() True or False for x is equal to 13
+print("x is equal to 13 is ",x==13)
+print("x is different from 21 is ",x!=21)
+
+# [ ] create a test to print True or False for 3 + 3 is greater than 2 + 4
+y=3+3
+z=2+4
+relation_yz=y>z
+
+print("3+3 is greater than 2+4 is ",relation_yz)
+
+# [ ] create an if/else statement that tests if y is greater than or equal x + x 
+# [ ] print output: "y greater than or equal x + x is" True/False ...or a similar output
+x = 3
+y = x + 8
+
+if y>(x+x):
+    print("y is greater than x+x")
+else:
+    print("y in NOT greater than x+x")
+
+msg = "Hello"
+# [ ] print the True/False results of testing if msg string equals "Hello" string
+
+if msg=="Hello":
+    print("they match")
+else:
+    print("they don't match")
+
+greeting = "Hello"
+# [ ] get input for variable named msg, and ask user to 'Say "Hello"'
+# [ ] print the results of testing if msg string equals greeting string
+
+named_msg=input("Say 'Hello' \n")
+
+if named_msg==greeting:
+    print("Good spelling!")
+else:
+    print("mispelled.")
+    
+# [ ] get input for a variable, answer, and ask user 'What is 8 + 13? : '
+# [ ] print messages for correct answer "21" or incorrect answer using if/else
+# note: input returns a "string"
+
+answer=input("What is 8+13? ")
+
+if answer=="21":
+    print("that's correct!")
+else:
+    print("try again.")
+
+
+#create a tf_quiz
+    
+def tf_quiz(question_str,answer_key):
+    answer_given=input(question_str)
+    if answer_given == answer_key:
+        print("Hooray! You got it right.")
+    else:
+        print("Not the correct answer. Try again.")
+        
+tf_quiz("What's your name?","Caro")
+
+# [ ] code and test SHIRT SALE
+
+shirt_size=input("Insert your size S, M, L: ")
+
+if shirt_size=="S":
+    print("Small = $6")
+elif shirt_size=="M":
+    print("Medium = $7")
+elif shirt_size=="L":
+    print("Large = $8")
+else:
+    print("Sorry, size not available.")
+
+str_num_1 = "11"
+str_num_2 = "15"
+int_num_3 = 10
+# [ ] Add the 3 numbers as integers and print the result
+
+sum_123=int(str_num_1)+int(str_num_2)+int_num_3
+print(sum_123)
+
+
+str_num_1 = "11"
+str_num_2 = "15"
+int_num_3 = 10
+# [ ] Add the 3 numbers as test strings and print the result
+
+sum_123_2=str_num_1+str_num_2+str(int_num_3)
+print(sum_123_2)
+
+# [ ] code and test: adding using int casting
+str_integer = "2"
+int_number = 10
+number_total = int(str_integer) + int_number
+print(number_total)
+
+# [ ] code and test the adding calculator
+
+int_1=int(input("Add an integer: "))
+int_2=int(input("Add another integer: "))
+
+added_ints=int_1+int_2
+print(added_ints)
+
+# [ ] print the result of subtracting 15 from 43
+print(43-15)
+
+# [ ] print the result of multiplying 15 and 43
+print(15*43)
+
+# [ ] print the result of dividing 156 by 12
+print(156/12)
+
+# [ ] print the result of dividing 21 by 0.5
+print(21/0.5)
+
+# [ ] print the result of adding 111 plus 84 and then subtracting 45
+print(111+84-45)
+
+# [ ] print the result of adding 21 and 4 and then multiplying that sum by 4
+print((21+4)*4)
+
+# [ ] create and test multiply() function
+
+def multiply():
+    num_1=input("Enter a whole number: ")
+    num_2=input("Enter another whole number: ")
+    final_num=str(int(num_1)*int(num_2))
+    result=(num_1+"*"+num_2+"="+final_num)
+    return result
+
+print(multiply())
+
+# create improved multiply() function and test with /, no argument, and an invalid operator ($)
+
+def multiply(num_1,num_2,operator="*"):
+    if operator =="*":
+        final_num=str(int(num_1)*int(num_2))
+        result=(num_1+"*"+num_2+"="+final_num)
+        return result
+    elif operator=="/":
+        final_num=str(int(num_1)/int(num_2))
+        result=(num_1+"/"+num_2+"="+final_num)
+        return result
+    else:
+        print("Invalid Operator")
+
+num_1=input("Enter a whole number: ")
+num_2=input("Enter another whole number: ")
+
+print(multiply(num_1,num_2))
+
+operator="/"
+print(multiply(num_1,num_2))
+
+operator=input("which operator do you want to use?" )
+print(multiply(num_1,num_2,operator))
+
+#30-08-2019
+#CaroCF
+#Practice exercises from Module 2
+
+
+# ask for input of a favorite rainbow color first letter: ROYGBIV
+
+rainbow_col=input("Insert the first letter of your rainbow favourite color: ").lower()
+
+if rainbow_col=="r":
+    print("R = Red")
+elif rainbow_col=="o":
+    print("O = Orange")
+elif rainbow_col=="y":
+    print("Y = Yellow")
+elif rainbow_col=="g":
+    print("G = Green")
+elif rainbow_col=="b":
+    print("B = Blue")
+elif rainbow_col=="i":
+    print("I = Indigo")
+elif rainbow_col=="v":
+    print("V = Violet")
+else:
+    print("no match")
+
+# [ ] make the code above into a function rainbow_color() that has a string parameter, 
+# get input and call the function and return the matching color as a string or "no match" message.
+# Call the function and print the return string.
+
+def rainbow_c():
+    colour=input("Insert the first letter of your rainbow favourite color: ").lower()
+    if colour=="r":
+        red=print("R = Red")
+        return red
+    elif colour=="o":
+        orange=print("O = Orange")
+        return orange
+    elif colour=="y":
+        yellow=print("Y = Yellow")
+        return yellow
+    elif colour=="g":
+        green=print("G = Green")
+        return green
+    elif colour=="b":
+        blue=print("B = Blue")
+        return blue
+    elif colour=="i":
+        indigo=print("I = Indigo")
+        return indigo
+    elif colour=="v":
+        violet=print("v = Violet")
+        return violet
+    else:
+        print("no match")
+
+rainbow_c()
+
+#31-08-2019
+#CaroCF
+#Practice exercises from Module 2
+
+def rainbow_c():
+    colour=input("Insert the first letter of your rainbow favourite color: ").lower()
+    if colour=="r":
+        red=print("R = Red")
+        return red
+    elif colour=="o":
+        orange=print("O = Orange")
+        return orange
+    elif colour=="y":
+        yellow=print("Y = Yellow")
+        return yellow
+    elif colour=="g":
+        green=print("G = Green")
+        return green
+    elif colour=="b":
+        blue=print("B = Blue")
+        return blue
+    elif colour=="i":
+        indigo=print("I = Indigo")
+        return indigo
+    elif colour=="v":
+        violet=print("v = Violet")
+        return violet
+    else:
+        print("no match")
+
+#Create function age_20() that adds or subtracts 20 from your age for a return value based on current age (use if)
+
+current_age=input("Type in your current age: ")
+operator=input("Type where you want to jump to (past/future): ")
+
+def age_20():
+    if operator.lower()=="past":
+        jump=int(current_age)-20
+        print("We've jumped 20 years into the past and you're now ",jump," years old.")
+    elif operator.lower()=="future":
+        jump=int(current_age)+20
+        print("we've jumped 20 years into the future and you're now ",jump," yearls old.")
+    else:
+        print("Sorry, ",operator," is not valid.")
+
+age_20()
+
+def rainbow_or_age():
+    arg=input("Enter your age or a letter: ")
+    if arg.isdigit():
+        current_age=int(arg)
+        operator="past"
+        age_20()
+    elif arg.isalpha():
+        colour=arg
+        rainbow_c()
+    else:
+        print("false")
+
+rainbow_or_age()
+
+#31-08-2019
+#CaroCF
+#Practice exercises from Module 2
+
+numbers=int(input("Enter two numbers: "))
+print(numbers)
+
+print("multiplication")
+num_1=int(input("Enter a number: "))
+num_2=int(input("Enter another number: "))
+multiplication=num_1*num_2
+print(multiplication)
+
+print("average")
+num_1=int(input("Enter a number: "))
+num_2=int(input("Enter another number: "))
+average=(num_1+num_2)/2
+print("The average is: ",average)
+
+print("subtraction")
+num_1=int(input("Enter a number: "))
+num_2=int(input("Enter another number: "))
+if num_1>=num_2:
+    subtraction=num_1-num_2
+    print(subtraction)
+elif num_1<num_2:
+    subtraction=num_2-num_1
+    print(subtraction)
+else:
+    print("Sorry, there's been an error.")
+
+
+print("division")
+num_1=int(input("Enter a number: "))
+num_2=int(input("Enter another number: "))
+if num_1==0:
+    division=0
+    print(division)
+elif num_2==0:
+    division=0
+    print(division)
+elif num_1>=num_2:
+    division=int(num_1/num_2)
+    print(division)
+elif num_1<num_2:
+    division=int(num_2/num_1)
+    print(division)
+else:
+    print("Sorry, there's been an error.")
+
+#Program: Cheese Order
+#set values for maximum and minimum order variables
+#set value for price variable
+#get order_amount input and cast to a number
+#check order_amount and give message checking against
+#over maximum
+#under minimum
+#else within maximum and minimum give message with calculated price
+
+order=float(input("How much cheese (in kg) would you like to order? "))
+
+if order>100:
+    print("Sorry, ",order," is more than what we currently have available.")
+elif order<0.25:
+    print("Sorry, ",order," is less than minimum amount of 0.25kg.")
+else:
+    cheese_price=14.99
+    order_price=order*cheese_price
+    print(order," costs €",order_price)
+
+# [ ] Say "Hello" with nested if
+# [ ] Challenge: handle input other than y/n
+
+hello=input("would you like to say hello? Type y/n: ")
+
+if hello.lower()=="y":
+    full=input("Full 'Hello'? Type y/n: ")
+    if full.lower()=="y":
+        print("Hello")
+    else:
+        print("Hi")
+else:
+    print("(friendly nod)")
+
+# [ ] Create the "Guess the bird" program
+
+bird="pigeon"
+guess_1=input("Guess which bird I'm thinking of: ")
+
+if guess_1.lower()!="pigeon":
+    print("Guess again")
+    guess_2=input("Second try: ")
+    if guess_2.lower()!="pigeon":
+        print("Guess again")
+        guess_3=input("Third try: ")
+        if guess_3.lower()!="pigeon":
+            print("Sorry, not correct and no more tries. Game over.")
+        else:
+            print("Yes! Pigeon is correct.\nWon on third try.")
+    else:
+        print("Yes! Pigeon is correct.\nWon on second try.")
+else:
+    print("Yes! Pigeon is correct.\nWon on first try.")
+
+#Format using backslash (\) escape sequences
+    
+# [ ] print "\\\WARNING!///"
+print("\"\\\WARNING!///\"" )
+
+# [ ] print output that is exactly (with quotes): "What's that?" isn't a specific question.
+print("\"What's that?\" isn't a specific question.")
+
+# [ ] from 1 print statement output the text commented below using no spaces
+# One     Two     Three
+# Four    Five    Six
+print("One\tTwo\tThree\nFour\tFive\tSix")
+
+# [ ] create and test pre_word()
+
+def pre_word():
+    word=input("enter a word: ")
+    if word.startswith("pre"):
+        if word.isalpha():
+            print("True")
+        else:
+            print("False")
+    else:
+        print("False")
+        
+pre_word()
+
+# [ ] review, run, fix
+print("Hello\nWorld!")
+
+# [ ] create Get Name program
+
+familiar_name=""
+
+while True:
+    name_input=input("Please enter a familiar name: ")
+    if name_input.isalpha():
+        print(name_input," is a nice name!")
+        break
+    else:
+        print(name_input," is not valid.")
+
