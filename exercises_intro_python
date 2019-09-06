@@ -38,3 +38,18 @@ while True:
         print("Invalid input. Please try again.")
 
 print("Your shirt order: ",shirt_s," S shirts, ",shirt_m," M shirts and ",shirt_l," L shirts.")
+
+
+
+# [ ] Create the Animal Names program, run tests
+
+animal_num =0
+all_animals=[]
+
+while animal_num<4:
+    animal_name=input("Enter an animal name: ")
+    all_animals.append(animal_name)
+    animal_num+=1
+    
+print(all_animals)
+
