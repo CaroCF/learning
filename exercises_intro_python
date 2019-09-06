@@ -1,0 +1,40 @@
+#06.09.2019
+#CaroCF
+# Practice exercises
+
+shirt_S = 10
+
+while True:
+    print("S shirts: ",shirt_S)
+    shirt_S=shirt_S-1
+
+    if shirt_S<0:
+        break
+
+# [ ] Create the Shirt Count program, run tests
+
+shirt_s = 0
+shirt_m = 0
+shirt_l = 0
+
+while True:
+    shirt_type= input("enter a shirt size: S, M or L or press 'q' to exit")
+    if shirt_type.lower()=="q":
+        print()
+        break
+    elif shirt_type.lower()== "s":
+        shirt_s +=1
+        if shirt_S>10:
+            print("Sorry, we do not have any more S shirts.")
+    elif shirt_type.lower()=="m":
+        shirt_m+=1
+        if shirt_m>10:
+            print("Sorry, we do not have any more M shirts,")
+    elif shirt_type.lower()=="l":
+        shirt_l+=1
+        if shirt_l>10:
+            print("Sorry, we do not have any more L shirts.")
+    else:
+        print("Invalid input. Please try again.")
+
+print("Your shirt order: ",shirt_s," S shirts, ",shirt_m," M shirts and ",shirt_l," L shirts.")
